@@ -77,5 +77,5 @@ total_time_td = datetime.timedelta(seconds=total_time * 60)
 # Для пункта В
 total_time_tdd = datetime.timedelta(seconds=total_time_dict * 60)
 # Выводим результат
-print(f"Пункт D\A: Три песни звучат {str(total_time_td)[2:-7]}")
-print(f"Пункт D\B: Три песни звучат {str(total_time_tdd)[2:-7]}")
+print(f"Пункт D\A: Три песни звучат {str(total_time_td)[2:7]}")
+print(f"Пункт D\B: Три песни звучат {str(total_time_tdd)[2:7]}")
