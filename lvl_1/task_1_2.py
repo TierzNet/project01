@@ -70,12 +70,16 @@ print(f"Пункт С\В: Случайные песни: {random_songs_list_dict
 
 # Пункт D. Переведите минуты и секунды в формат времени. Используйте модуль datetime
 
-# Создаем объект timedelta с количеством секунд, равным общему времени звучания трех случайных песен
+# Создаем объект datetime с количеством секунд, равным общему времени звучания трех случайных песен
 
 # Для пункта А
-total_time_td = datetime.timedelta(seconds=total_time * 60)
+minute = int(total_time)
+second = int((total_time - minute) * 60)
+time_str = datetime.time(minute, second).strftime('%M:%S')
 # Для пункта В
-total_time_tdd = datetime.timedelta(seconds=total_time_dict * 60)
+minute = int(total_time_dict)
+second = int((total_time_dict - minute) * 60)
+time_str_d = datetime.time(minute, second).strftime('%M:%S')
 # Выводим результат
-print(f"Пункт D\A: Три песни звучат {str(total_time_td)[2:7]}")
-print(f"Пункт D\B: Три песни звучат {str(total_time_tdd)[2:7]}")
+print(f"Пункт D\A: Три песни звучат {time_str}")
+print(f"Пункт D\B: Три песни звучат {time_str_d}")
