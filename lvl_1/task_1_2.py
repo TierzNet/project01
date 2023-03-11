@@ -1,4 +1,5 @@
 # Импорт модулей
+import math
 import random
 import datetime
 
@@ -7,7 +8,7 @@ def add_fun(songs_time):
     # Список с минутами и секундами
     total_time = [0, 0]
     for song in songs_time:
-        whole_number = int(song[1])  # целая часть числа
+        whole_number = math.floor(song[1]) # целая часть числа c округлением в меньшую сторону
         fractional_number = int(song[1] * 100 % 100)  # дробная часть числа в сотых долях
         # Складываем с предыдущим проходом
         total_time[0] += whole_number
