@@ -15,6 +15,9 @@
 
     # Введите номер месяца: 15
     # Такого месяца нет!
+import datetime
+import locale
+locale.setlocale(locale.LC_ALL, "ru")
 
 # Ввод месяца
 month = input("Введите номер месяца: ")
@@ -25,6 +28,8 @@ if not month.isdigit():
 elif int(month) < 1 or int(month) > 12:
     print("Такого месяца нет!")
 else:
+    # Генерируем название месяца
+    month_name = datetime.date(2023, int(month), 1).strftime('%B')
     # Если введен номер февраля, то количество дней равно 28
     if int(month) == 2:
         days_in_month = 28
@@ -38,4 +43,4 @@ else:
     else:
         days_in_month = 30
 
-    print(f"Вы ввели месяц, который содержит {days_in_month} дней")
+    print(f"Вы ввели месяц {month_name}, который содержит {days_in_month} дней")
