@@ -17,6 +17,7 @@
     # Такого месяца нет!
 import datetime
 import locale
+# Что бы название месяца было на русском
 locale.setlocale(locale.LC_ALL, "ru")
 
 # Ввод месяца
