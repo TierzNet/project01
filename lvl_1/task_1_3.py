@@ -15,6 +15,7 @@
 
     # Введите номер месяца: 15
     # Такого месяца нет!
+
 import datetime
 import locale
 # Что бы название месяца было на русском
@@ -24,24 +25,13 @@ locale.setlocale(locale.LC_ALL, "ru")
 month = input("Введите номер месяца: ")
 
 # Проверка на корректность введенного номера месяца
-if not month.isdigit():
-    print("Ошибка: введено не число!")
-elif int(month) < 1 or int(month) > 12:
+if not month.isdigit() or int(month) < 1 or int(month) > 12:
     print("Такого месяца нет!")
 else:
     # Генерируем название месяца
     month_name = datetime.date(2023, int(month), 1).strftime('%B')
-    # Если введен номер февраля, то количество дней равно 28
-    if int(month) == 2:
-        days_in_month = 28
-    # Если введен номер августа, то количество дней равно 31
-    elif int(month) == 8:
-        days_in_month = 31
-    # Если введен нечетный номер месяца, то количество дней равно 31
-    elif int(month) % 2 == 1:
-        days_in_month = 31
-    # Если введен четный номер месяца, то количество дней равно 30
-    else:
-        days_in_month = 30
+
+    # Назначаем количество дней в месяце
+    days_in_month = 28 if int(month) == 2 else 30 if int(month) in [4, 6, 9, 11] else 31
 
     print(f"Вы ввели месяц {month_name}, который содержит {days_in_month} дней")
