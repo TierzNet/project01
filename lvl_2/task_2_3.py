@@ -28,3 +28,5 @@ number = int(input('Введите число от 0 до 9: '))
 
 # вызываем функцию switch_it_up() и выводим её результат на экран
 print(switch_it_up(number))
+
+# Отлично!
