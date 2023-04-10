@@ -88,3 +88,5 @@ print(remove_word_with_one_em(s9))  # Hi
 print(remove_word_with_one_em(s10))  #
 print(remove_word_with_one_em(s11))  # Hi!!
 print(remove_word_with_one_em(s12))  # !Hi!
+
+# Да! Все отлично!)
