@@ -49,3 +49,4 @@ for title, code in titles.items():
 
     # Вывести результаты
     print(f"{title} - {total_quantity} шт, стоимость {total_cost} руб")
+# Отлично!
